@@ -5,7 +5,7 @@ const nextConfig = {
 
 module.exports = {
   images: {
-    domains: ["flagcdn.com"],
+    domains: ["upload.wikimedia.org", "flagcdn.com"],
   },
   nextConfig,
 };

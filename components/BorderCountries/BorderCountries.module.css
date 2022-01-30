@@ -1,0 +1,37 @@
+.border_countries_container {
+  text-align: left;
+}
+
+.border_countries_grid {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 10px;
+}
+
+.border_country_item {
+  width: 100%;
+  cursor: pointer;
+}
+
+.image_container {
+  position: relative;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 150px;
+}
+
+.content {
+  display: block;
+  width: 150px;
+  height: 100px;
+  position: relative;
+}
+
+.border_details {
+  display: flex;
+  flex-direction: column;
+  word-break: break-all;
+}
