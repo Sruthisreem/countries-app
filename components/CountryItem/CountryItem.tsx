@@ -8,8 +8,12 @@ type Props = {
 
 export default function CountryItem({ country }: Props): JSX.Element {
   return (
-    <Link href={`/${country.name.common}`}>
-      <div className={styles.country_item}>
+    <Link passHref href={`/${country.name.common}`}>
+      <div
+        id="country-item"
+        data-testid={`country-${country.name.common}`}
+        className={styles.country_item}
+      >
         <fieldset className={styles.country_container}>
           <legend>{country.name.common}</legend>
           <div className={styles.country_container}>
@@ -17,7 +21,7 @@ export default function CountryItem({ country }: Props): JSX.Element {
               <div className={styles.image_container}>
                 <Image
                   src={country.flags.png}
-                  alt={` Beatiful Flag`}
+                  alt={`${country.name.common}-Flag`}
                   layout="fill"
                   object-position="center"
                 />
@@ -28,7 +32,7 @@ export default function CountryItem({ country }: Props): JSX.Element {
               </div>
             </div>
             <div className={styles.population_container}>
-              <span>Population:</span>{" "}
+              Population:{" "}
               {new Intl.NumberFormat("en-US").format(country.population)}
             </div>
           </div>

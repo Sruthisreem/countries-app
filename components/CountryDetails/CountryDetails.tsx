@@ -6,7 +6,6 @@ type CountryDetail = {
   details: CountryDetailsType;
 };
 const CountryDetails = ({ details }: CountryDetail) => {
-  console.log("CountryDetails", details);
   return (
     <div className={styles.details_container}>
       <h3>{details?.name?.common || "Not Available"}</h3>

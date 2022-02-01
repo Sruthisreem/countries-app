@@ -10,19 +10,19 @@ export interface CountryDetailsType {
   capital: Array<string>;
   flags: Flags;
   population: number;
-  currencies: Currency[];
-  languages: Language[];
+  currencies: {
+    [key: string]: Currency;
+  };
+  languages: { [key: string]: string };
   borders?: Array<string>;
 }
 
 export interface CountryName {
   common: string;
   official: string;
-  nativeName: any;
 }
 
 export interface Currency {
-  code: string;
   name: string;
   symbol: string;
 }
@@ -30,11 +30,4 @@ export interface Currency {
 export interface Flags {
   svg: string;
   png: string;
-}
-
-export interface Language {
-  iso639_1?: string;
-  iso639_2: string;
-  name: string;
-  nativeName?: string;
 }

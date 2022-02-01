@@ -1,4 +1,3 @@
-import styles from "./CountryItem.module.css";
 import { Country } from "../../interfaces";
 import CountryItem from "../CountryItem/CountryItem";
 type CountryListProps = {

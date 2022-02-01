@@ -21,7 +21,10 @@ const BorderCountries = ({ borderCountries }: BorderCountry) => {
             <div className={styles.border_details}>
               <span>{country.name.common}</span>
               <span>{country.capital}</span>
-              <span>{country.population}</span>
+              <span>
+                {new Intl.NumberFormat("en-US").format(country?.population) ||
+                  "Not Available"}
+              </span>
             </div>
           </div>
         ))}

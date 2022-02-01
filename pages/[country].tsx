@@ -13,7 +13,7 @@ type CountryProp = {
   borderCountries: Country[];
   isSuccess: boolean;
 };
-const Country = ({
+const CountrySelectedDetails = ({
   countryDetails,
   borderCountries,
   isSuccess,
@@ -25,7 +25,7 @@ const Country = ({
       </Head>
       {isSuccess ? (
         <>
-          <Link href={`/`}>
+          <Link passHref href={`/`}>
             <div className={styles.back_button}>
               <AiOutlineArrowLeft />
               <span> Back</span>
@@ -109,4 +109,4 @@ export async function getStaticProps({ params }: any) {
   }
 }
 
-export default Country;
+export default CountrySelectedDetails;
