@@ -10,7 +10,10 @@ const BorderCountries = ({ borderCountries }: BorderCountry) => {
     <div className={styles.border_countries_container}>
       <div className={styles.border_countries_grid}>
         {borderCountries?.map((country: any, index: number) => (
-          <div className={styles.card} key={`${index}-${country.name.common}`}>
+          <div
+            className={styles.border_card}
+            key={`${index}-${country.name.common}`}
+          >
             <div className={styles.content}>
               <Image
                 src={country.flags.png || country.flags.svg}
@@ -19,8 +22,8 @@ const BorderCountries = ({ borderCountries }: BorderCountry) => {
               />
             </div>
             <div className={styles.border_details}>
-              <span>{country.name.common}</span>
-              <span>{country.capital}</span>
+              <span>{country?.name?.common || "Not Available"}</span>
+              <span>{country?.capital || "Not Available"}</span>
               <span>
                 {new Intl.NumberFormat("en-US").format(country?.population) ||
                   "Not Available"}

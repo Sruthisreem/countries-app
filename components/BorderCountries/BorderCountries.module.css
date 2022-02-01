@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.card {
+.border_card {
   display: flex;
   flex-direction: column;
   width: 150px;
