@@ -6,12 +6,11 @@ type BorderCountry = {
   borderCountries: Country[];
 };
 const BorderCountries = ({ borderCountries }: BorderCountry) => {
-  console.log(borderCountries);
   return (
     <div className={styles.border_countries_container}>
       <div className={styles.border_countries_grid}>
         {borderCountries?.map((country: any, index: number) => (
-          <div className={styles.card}>
+          <div className={styles.card} key={`${index}-${country.name.common}`}>
             <div className={styles.content}>
               <Image
                 src={country.flags.png || country.flags.svg}

@@ -1,21 +1,40 @@
 export interface Country {
-  name: {
-    common: string;
-    official: string;
-    nativeName: any;
-  };
+  name: CountryName;
   capital?: Array<string>;
-  flags: {
-    png: string;
-    svg: string;
-  };
+  flags: Flags;
   population: number;
 }
 
-export interface CountryDetails {
-  common: string;
+export interface CountryDetailsType {
+  name: CountryName;
   capital: Array<string>;
+  flags: Flags;
   population: number;
-  currencies: object;
-  languages: object;
+  currencies: Currency[];
+  languages: Language[];
+  borders?: Array<string>;
+}
+
+export interface CountryName {
+  common: string;
+  official: string;
+  nativeName: any;
+}
+
+export interface Currency {
+  code: string;
+  name: string;
+  symbol: string;
+}
+
+export interface Flags {
+  svg: string;
+  png: string;
+}
+
+export interface Language {
+  iso639_1?: string;
+  iso639_2: string;
+  name: string;
+  nativeName?: string;
 }

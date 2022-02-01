@@ -1,16 +1,33 @@
-import { CountryDetails } from "../../interfaces";
+import { CountryDetailsType } from "../../interfaces";
 import styles from "./CountryDetails.module.css";
+import { mapKeysToString } from "../../utils/helper";
+
 type CountryDetail = {
-  details: CountryDetails;
+  details: CountryDetailsType;
 };
 const CountryDetails = ({ details }: CountryDetail) => {
+  console.log("CountryDetails", details);
   return (
     <div className={styles.details_container}>
-      <div>countryName</div>
-      <div>Capital: {`capital`}</div>
-      <div>Population: {`population`}</div>
-      <div>Currency: {`currency`}</div>
-      <div>Languages: {`languages`}</div>
+      <h3>{details?.name?.common || "Not Available"}</h3>
+      <div>Capital: {details?.capital || "Not Available"}</div>
+      <div>
+        Population:{" "}
+        {new Intl.NumberFormat("en-US").format(details?.population) ||
+          "Not Available"}
+      </div>
+      <div>
+        Currency:{" "}
+        {details?.currencies
+          ? mapKeysToString(details.currencies)
+          : "Not Available"}
+      </div>
+      <div>
+        Languages:{" "}
+        {details?.languages
+          ? Object.values(details.languages).join(",")
+          : "Not Available"}
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ type Props = {
 
 export default function CountryItem({ country }: Props): JSX.Element {
   return (
-    <Link href={`/${country.name}`}>
+    <Link href={`/${country.name.common}`}>
       <div className={styles.country_item}>
         <fieldset className={styles.country_container}>
           <legend>{country.name.common}</legend>

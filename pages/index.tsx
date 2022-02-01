@@ -1,16 +1,15 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
-import CountryItem from "../components/CountryItem/CountryItem";
+import CountryList from "../components/CountryList/CountryList";
 import { Country } from "../interfaces";
-
+import ErrorComponent from "../components/ErrorComponent/ErrorComponent";
 type HomeProps = {
   countries: Country[];
   isSuccess: boolean;
 };
 
 const Home = ({ countries, isSuccess }: HomeProps) => {
-  console.log("countries", countries);
   return (
     <div className={styles.container}>
       <Head>
@@ -23,13 +22,7 @@ const Home = ({ countries, isSuccess }: HomeProps) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        {isSuccess ? (
-          countries?.map((country, index: number): any => (
-            <CountryItem country={country} />
-          ))
-        ) : (
-          <div>error</div>
-        )}
+        {isSuccess ? <CountryList countries={countries} /> : <ErrorComponent />}
       </main>
     </div>
   );
