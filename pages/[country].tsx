@@ -44,14 +44,14 @@ const CountrySelectedDetails = ({
             <div className={styles.country_details_section}>
               <CountryDetails details={countryDetails}></CountryDetails>
             </div>
-            <div>Bordering Countries</div>
+            <div className={styles.label_heading}>Bordering Countries</div>
             <div className={styles.bordering_countries}>
               {borderCountries.length ? (
                 <BorderCountries
                   borderCountries={borderCountries}
                 ></BorderCountries>
               ) : (
-                "No data available"
+                <span>None</span>
               )}
             </div>
           </div>

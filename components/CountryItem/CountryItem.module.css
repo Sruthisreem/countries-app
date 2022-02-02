@@ -2,6 +2,7 @@
   display: flex;
   padding: 0.5em;
   min-width: 400px;
+  cursor: pointer;
 }
 .country_container {
   width: 100%;
@@ -19,7 +20,6 @@
 .image_container {
   padding: 1px;
   position: relative;
-  /* width: 30%; */
   display: flex;
   flex: 1;
 }
@@ -27,13 +27,14 @@
 .details_container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
-  flex: 2;
+  padding: 0 1rem 1rem 1rem;
+  flex: 2 1;
+  row-gap: 1rem;
 }
 
 .population_container {
   flex: 1;
-  padding-top: 2rem;
+  padding: 2rem 0 2rem 0;
 }
 
 @media (max-width: 400px) {
@@ -43,6 +44,14 @@
     min-width: 300px;
   }
   .image_container {
-    width: 40%;
+    max-width: 108px;
+    height: 68px;
+  }
+  .details_container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 1rem 1rem;
+    row-gap: 1rem;
+    flex: 1;
   }
 }

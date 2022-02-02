@@ -24,6 +24,7 @@
   border-radius: 2px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 
 .country_details {
@@ -47,4 +48,8 @@
 }
 .bordering_countries {
   margin: 20px 0 20px 0;
+}
+
+.label_heading {
+  font-weight: bold;
 }
