@@ -5,7 +5,9 @@ import { Country } from "../../interfaces";
 type Props = {
   country: Country;
 };
-
+/**
+ * A country card view item with flag, country name, capital and population
+ */
 export default function CountryItem({ country }: Props): JSX.Element {
   return (
     <Link passHref href={`/${country.name.common}`}>

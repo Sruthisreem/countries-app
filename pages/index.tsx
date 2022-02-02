@@ -29,6 +29,10 @@ const Home = ({ countries, isSuccess }: HomeProps) => {
 };
 
 export const getStaticProps = async () => {
+  /**
+   * Fetching the countries and return the country list with details
+   * and the status of the request
+   */
   try {
     const response = await fetch(
       "https://restcountries.com/v3.1/all?fields=flags,capital,name,population"

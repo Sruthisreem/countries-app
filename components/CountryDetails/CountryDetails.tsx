@@ -5,6 +5,9 @@ import { mapKeysToString } from "../../utils/helper";
 type CountryDetail = {
   countryItemDetails: CountryDetailsType;
 };
+/**
+ * A component for selected country details
+ */
 const CountryDetails = ({ countryItemDetails }: CountryDetail) => {
   return (
     <div className={styles.details_container}>

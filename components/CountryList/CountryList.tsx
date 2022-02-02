@@ -3,6 +3,9 @@ import CountryItem from "../CountryItem/CountryItem";
 type CountryListProps = {
   countries: Country[];
 };
+/**
+ * Component returns a list of country items
+ */
 const CountryList = ({ countries }: CountryListProps) => {
   return (
     <>

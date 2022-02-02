@@ -5,6 +5,9 @@ import Image from "next/image";
 type BorderCountry = {
   borderCountries: Country[];
 };
+/**
+ * generates border country component and returns a list of border countries
+ */
 const BorderCountries = ({ borderCountries }: BorderCountry) => {
   return (
     <div className={styles.border_countries_container}>

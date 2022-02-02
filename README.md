@@ -1,34 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# `Countries App`
 
-## Getting Started
+## An application displays lists of countries in the world. On selecting a country, user can see more details about the country in the details screen. The details page will be with selected country flag, population, capital, currency and language.The details screen also has a list of bordering countries. User can navigate to the country listing screen on clicking back button.
 
-First, run the development server:
+### `Deployed Application URL`
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+[need to fill](need to fill)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## `Installation and Setup Instructions`
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- You will need node and npm installed globally on your machine.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Clone this project repository -[https://github.com/Sruthisreem/posts-and-comments.git](https://github.com/Sruthisreem/posts-and-comments.git)
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+  ```
+  git clone https://github.com/Sruthisreem/countries-app.git
+  ```
 
-## Learn More
+- `Installation`:
+  ```
+   npm install
+  ```
+- `To Run Test Suite` :
 
-To learn more about Next.js, take a look at the following resources:
+  - unit testing with jest and react testing library
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  ```
+  npm test
+  ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- `To Run the development server:` :
 
-## Deploy on Vercel
+  ```
+  npm start
+  ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `To Visit App` : http://localhost:3000/
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## `Technologies/Tools`
+
+A list of technologies used within the project:
+
+- Next JS
+- Typescript
+- Jest Testing
+- React Testing Library
+- CSS modules
+
+## `Project Explanation`
+
+This Application is a Next JS project paired with REST Countries API to get country data. This Application shows list of countries with its flag, capital, name and population in the screen. On selecting a country user will be navigated to details screen, where the selected country details are displayed. The details screen will display the flag, capital, country name, language and currency. The details screen will display the bordering countries for the selected country. The bodering countries are displayed with its flag, country name and population.
+
+I started this process by using the npx create-next-app boilerplate.First started with creating UI, for that country item with flag,country name and other details for the countries listing screen was created. Then created a header and layout for the page. once these components are completed, started with listing the country Items in the screens.After listing was completed an API call to get countries data was integrated to the home page and result were integrated to the component.
+
+Once listing screen was completed, started with country details component for showing country details. then started with border country component for showing the list of bordering countries. Then created a dynamic country page and added these CountryDetails and borderCountries component to the page and and a back button is added to the details page.
+After completing UI, started with API call for fetching selected country details and selected country border details.
+For the components unit testing was performed with the help of jest and react testing library.
+
+## `Things to improve`
+
+- Add more test cases

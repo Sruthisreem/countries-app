@@ -1,4 +1,8 @@
 import styles from "../ErrorComponent/ErrorComponent.module.css";
+
+/**
+ * A component for displaying error message
+ */
 const ErrorComponent = () => {
   return (
     <div className={styles.error}>
