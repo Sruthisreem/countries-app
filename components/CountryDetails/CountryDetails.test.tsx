@@ -17,7 +17,7 @@ describe("CountryDetails", () => {
       languages: { ara: "Arabic", eng: "English" },
       population: 43849269,
     };
-    render(<CountryDetails details={countryDetails} />);
+    render(<CountryDetails countryItemDetails={countryDetails} />);
     expect(screen.getByText("Sudan")).toBeInTheDocument();
     expect(screen.getByText("Capital: Khartoum")).toBeInTheDocument();
     expect(screen.getByText("Currency: SDG")).toBeInTheDocument();

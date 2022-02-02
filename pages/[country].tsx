@@ -26,7 +26,7 @@ const CountrySelectedDetails = ({
       {isSuccess ? (
         <>
           <Link passHref href={`/`}>
-            <div className={styles.back_button}>
+            <div data-testid="bckbtn" className={styles.back_button}>
               <AiOutlineArrowLeft />
               <span> Back</span>
             </div>
