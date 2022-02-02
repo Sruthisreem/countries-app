@@ -55,6 +55,7 @@ A list of technologies used within the project:
 - Jest Testing
 - React Testing Library
 - CSS modules
+- Cypress
 
 ## `Project Explanation`
 
