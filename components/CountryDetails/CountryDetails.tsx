@@ -3,28 +3,29 @@ import styles from "./CountryDetails.module.css";
 import { mapKeysToString } from "../../utils/helper";
 
 type CountryDetail = {
-  details: CountryDetailsType;
+  countryItemDetails: CountryDetailsType;
 };
-const CountryDetails = ({ details }: CountryDetail) => {
+const CountryDetails = ({ countryItemDetails }: CountryDetail) => {
   return (
     <div className={styles.details_container}>
-      <h3>{details?.name?.common || "Not Available"}</h3>
-      <div>Capital: {details?.capital || "Not Available"}</div>
+      <h3>{countryItemDetails?.name?.common || "Not Available"}</h3>
+      <div>Capital: {countryItemDetails?.capital || "Not Available"}</div>
       <div>
         Population:{" "}
-        {new Intl.NumberFormat("en-US").format(details?.population) ||
-          "Not Available"}
+        {new Intl.NumberFormat("en-US").format(
+          countryItemDetails?.population
+        ) || "Not Available"}
       </div>
       <div>
         Currency:{" "}
-        {details?.currencies
-          ? mapKeysToString(details.currencies)
+        {countryItemDetails?.currencies
+          ? mapKeysToString(countryItemDetails.currencies)
           : "Not Available"}
       </div>
       <div>
         Languages:{" "}
-        {details?.languages
-          ? Object.values(details.languages).join(",")
+        {countryItemDetails?.languages
+          ? Object.values(countryItemDetails.languages).join(",")
           : "Not Available"}
       </div>
     </div>
