@@ -4,13 +4,13 @@
 
 ### `Deployed Application URL`
 
-[need to fill](need to fill)
+[https://countries-app-sruthisreem.vercel.app/](https://countries-app-sruthisreem.vercel.app/)
 
 ## `Installation and Setup Instructions`
 
 - You will need node and npm installed globally on your machine.
 
-- Clone this project repository -[https://github.com/Sruthisreem/posts-and-comments.git](https://github.com/Sruthisreem/posts-and-comments.git)
+- Clone this project repository -[https://github.com/Sruthisreem/countries-app.git](https://github.com/Sruthisreem/countries-app.git)
 
   ```
   git clone https://github.com/Sruthisreem/countries-app.git
